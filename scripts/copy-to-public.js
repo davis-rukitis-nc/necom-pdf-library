@@ -1,7 +1,8 @@
-import { cpSync, existsSync, mkdirSync } from 'fs'
-import { join } from 'path'
+const { cpSync, existsSync, mkdirSync } = require('fs')
+const { join } = require('path')
 
 const root = '/vercel/share/v0-project'
+console.log(`Working directory: ${root}`)
 
 function copyDir(src, dest) {
   if (!existsSync(src)) {
